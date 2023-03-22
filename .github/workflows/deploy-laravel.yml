@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: test
-        run: echo ${{ secrets.SSHKEY_DEV }}
+        run: echo "${{ secrets.SSHKEY_DEV }}"
       - name: ssh to server
         uses: appleboy/ssh-action@master
         with:
