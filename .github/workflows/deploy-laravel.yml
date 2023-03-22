@@ -1,0 +1,31 @@
+on: 
+  push:
+    branches:
+      - main
+      
+jobs:
+  deploy:
+    name: Deploy to main
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch all
+        run: git fetch -all
+      - name: Clear changed
+        run: git checkout .
+      - name: Pull new code
+        run: git pull --force
+      - uses: actions/checkout@v3
+        with:
+          ref: main
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: npm
+      - name: Install node_modules
+        run: npm install
+      - name: Install vendors
+        run: composer install
+      - name: make .env file
+        run: cp .env.example .env
+      - name: Generate app key secret
+        run: php artisab key:generate
