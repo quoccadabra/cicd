@@ -17,8 +17,6 @@ jobs:
           username: ${{ secrets.USERNAME_DEV }}
           key: ${{ secrets.SSHKEY_DEV }}
           port: 22
-      - name: cd root folder
-        run: cd /var/www/html/cicd/
       - name: show path
         run: pwd
       - uses: actions/checkout@v3
