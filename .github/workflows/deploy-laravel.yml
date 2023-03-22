@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: CD to root folder
-        run: cd ~/cicd
+        run: cd ../../
       - name: Fetch all
         run: git fetch -all
       - name: Clear changed
