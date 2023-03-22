@@ -11,14 +11,8 @@ jobs:
       - name: ssh to server
         uses: appleboy/ssh-action@master
         with:
-          host: 35.187.227.220
-          username: rcvn
-          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMEw0NXDh9M+a+pVpw4vVDVl9egzu0WhqkVD7EHeBNvYYgTKynQfLhH27GzC+ws50aEw8l+CuHN2j0xT05vogsd8Jiok9ALjy90zrEme3VQ2sKFu94PjW/z74/CxXs4jzs++ZVBBuOgNNyrXEIaCXypni1YUnVVozudNXSSnKbCBBRnSoNaL3TwKpz8MXWZZPShM8CjZMkPSIwdkDhyHLkTE6SCMLUM5DFNv2UBVqGkYrNfo3scJgvXuNoLQSFGWISCOe9RpwyQ0s1M5glUR8P278MrFNL+C/IjFhg4bkuhyzQj+qwcC2cEKpJDo8EOkQ8PB9BuOYhXZcM4oYatbN8+rXS+4u4Z8kLSgGgxXb/GMTa5Y9s61a0uI77gsSxDYhhU1Rk4kiCNelcaALDKJwrvTIw6sZyAVs7bEuge2y2349p9z63IB26hLdoC8KHVGfVCnvXLr+vtj2RH+d5ppO7rKUnza3jd1f+JtnnqZrd0IX570Bg6QDHxGMKlTV1F90= root@training-quoc
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - name: Install vendors
-        run: composer install
-      - name: make .env file
-        run: cp .env.example .env
-      - name: Generate app key secret
-        run: php artisan key:generate
+          host: ${{ secrets.HOST_DEV }}
+          username: ${{ secrets.USERNAME_DEV }}
+          key: ${{ secrets.SSHKEY_DEV }}
+          
+    
