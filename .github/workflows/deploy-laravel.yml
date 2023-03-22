@@ -8,6 +8,8 @@ jobs:
     name: Deploy to main
     runs-on: ubuntu-latest
     steps:
+      - name: CD to root folder
+        run: cd ~/cicd
       - name: Fetch all
         run: git fetch -all
       - name: Clear changed
