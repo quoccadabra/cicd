@@ -17,6 +17,8 @@ jobs:
           username: ${{ secrets.USERNAME_DEV }}
           key: ${{ secrets.SSHKEY_DEV }}
           port: 22
+      - name: show path
+        run: echo pwd
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
       - name: Install vendors
