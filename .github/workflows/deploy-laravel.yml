@@ -16,4 +16,4 @@ jobs:
       - name: make .env file
         run: cp .env.example .env
       - name: Generate app key secret
-        run: php artisab key:generate
+        run: php artisan key:generate
