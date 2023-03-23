@@ -3,6 +3,9 @@ _DEPLOY_BRANCH="main"
 #cd to root project
 #cd /var/www/html/cicd/
 
+#check php version
+php -v
+
 #starting maintenance mod in laravel
 php artisan down
 
