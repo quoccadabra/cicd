@@ -24,6 +24,9 @@ git pull origin $_DEPLOY_BRANCH
 #install vendors/
 composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 
+#generate keygen
+php artisan key:generate
+
 #run migration laravel
 #php artisan migrate --force
 
