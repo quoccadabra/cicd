@@ -17,7 +17,7 @@ jobs:
           username: ${{ secrets.USERNAME_DEV }}
           key: ${{ secrets.SSHKEY_DEV }}
           port: 22
-          script: "pwd && cd /var/www/html/cicd/ && sh deploy.sh"
+          script: "cd /var/www/html/cicd/ && pwd && sh deploy.sh"
           
 
           
