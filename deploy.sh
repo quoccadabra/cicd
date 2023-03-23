@@ -1,3 +1,5 @@
+#contruction variable
+_DEPLOY_BRANCH="main"
 #cd to root project
 #cd /var/www/html/cicd/
 
@@ -14,7 +16,7 @@ git reset --hard HEAD~2
 git fetch --all
 
 #pull new code from git
-git pull origin dev
+git pull origin $_DEPLOY_BRANCH
 
 #install vendors/
 composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
