@@ -1,5 +1,5 @@
 #cd to root project
-cd /var/www/html
+#cd /var/www/html/cicd/
 
 #starting maintenance mod in laravel
 php artisan down
