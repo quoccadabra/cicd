@@ -22,7 +22,7 @@ git fetch --all
 
 #pull new code from git
 echo "Pull branch new code"
-git pull origin $_DEPLOY_BRANCH
+git pull origin $_DEPLOY_BRANCH --force
 
 #install vendors/
 echo "Install vendor/ folder"
@@ -56,7 +56,13 @@ echo "Install node_modules/ folder"
 npm install
 
 #build file
-npm run prod
+npm run dev
+
+#run migration file
+php artisan migrate
+
+#build file
+php artisan db:seed
 
 # End maintenance mode
 echo "End mantenance mode"
