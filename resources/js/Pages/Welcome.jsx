@@ -21,22 +21,10 @@ export default function Welcome(props) {
                                 Dashboard
                             </Link>
                             <Link
-                                href={route('auth.memory')}
+                                href={route('memory.index')}
                                 className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
                             >
                                 Memory
-                            </Link>
-                            <Link
-                                href={route('auth.family')}
-                                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Family
-                            </Link>
-                            <Link
-                                href={route('auth.others')}
-                                className="font-semibold text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white focus:outline focus:outline-2 focus:rounded-sm focus:outline-red-500"
-                            >
-                                Others
                             </Link>
                         </>
                     ) : (
