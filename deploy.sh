@@ -53,10 +53,12 @@ php artisan config:cache
 # Clear and cache views
 php artisan view:cache
 
+#node version
+nvm use 18.15.0
 
 #install node_modules
 echo "Install node_modules/ folder"
-npm install
+npm i --save-dev @types/node
 
 #build file
 npm run build
