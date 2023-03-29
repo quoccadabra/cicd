@@ -17,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 //     Route::resource('memory', MemoryController::class);
 // })->middleware('guest');
 
-Route::prefix('auth')->prefix('auth')->group(function () {
+Route::prefix('auth')->group(function () {
     Route::resource('memory', MemoryController::class);
 })->middleware('auth');
