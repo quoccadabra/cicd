@@ -28,6 +28,9 @@ git pull origin $_DEPLOY_BRANCH --force
 echo "Install vendor/ folder"
 composer install --no-interaction --prefer-dist --optimize-autoloader --no-dev
 
+#composer update remove composer.lock
+composer update
+
 #generate keygen
 echo "Generate key"
 php artisan key:generate
@@ -56,7 +59,7 @@ echo "Install node_modules/ folder"
 npm install
 
 #build file
-npm run dev
+npm run build
 
 #run migration file
 php artisan migrate
